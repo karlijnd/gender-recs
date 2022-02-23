@@ -19,7 +19,7 @@ split_folder = 'lastfm'
 user_features_playcounts_filename = 'tracks_out_user_playcounts_als_{}.feats'
 item_features_playcounts_filename = 'tracks_out_item_playcounts_als_{}.feats'
 predictions_playcounts_filename = 'tracks_predicted_playcounts_als_{}.npy'
-user_features_file = '/home/andres/projects/implicit-bias/data/LFM-1b/LFM-1b_users.txt'
+user_features_file = 'data/LFM-1b/LFM-1b_users.txt'
 gender_location = 'data/lastfm/track_gender.json'
 
 def evaluate2(iteration_tracks, items_dict, tracks_pop):

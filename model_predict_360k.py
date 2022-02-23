@@ -229,12 +229,12 @@ if __name__== "__main__":
     artists_gender = json.load(open(gender_location))
     fan_train_data = sparse.load_npz(os.path.join('data', split_folder, 'rain_data_playcount.npz')).tocsr()
     sum_listen = fan_train_data.sum(axis=0)
-    fan_test_data = pickle.load(open(os.path.join('data', split_folder, 'test_data.pkl'), 'rb'))
-    fan_items_dict = pickle.load(open(os.path.join('data', split_folder, 'items_dict.pkl'), 'rb'))
+    fan_test_data = pickle.load(open(os.path.join('data', split_folder, 'test_data_360.pkl'), 'rb'))
+    fan_items_dict = pickle.load(open(os.path.join('data', split_folder, 'items_dict_360.pkl'), 'rb'))
     items_gender = [0]*len(fan_items_dict)
     for a in fan_items_dict.keys():
         items_gender[fan_items_dict[a]] =artists_gender[a]
-    fan_users_dict = pickle.load(open(os.path.join('data', split_folder,'users_dict.pkl'), 'rb'))
+    fan_users_dict = pickle.load(open(os.path.join('data', split_folder,'users_dict_360.pkl'), 'rb'))
     print ("Item", len(fan_items_dict))
     print ("User", len(fan_users_dict))
     print (sum_listen.shape)
